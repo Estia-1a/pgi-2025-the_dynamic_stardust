@@ -2,6 +2,14 @@
 
 #include "utils.h"
 
+pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ){
+    
+}
+
+int setPixel(){
+
+}
+
 /**
  * @brief Here, you have to define functions of the pixel struct : getPixel and setPixel.
  * 
