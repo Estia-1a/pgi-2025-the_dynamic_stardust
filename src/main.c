@@ -26,13 +26,21 @@ int main(int argc, char **argv) {
   /* Example with helloworld command
    * If helloworld is a called command: freud.exe -f images/input/image.jpeg -c helloworld 
    */
+  if ( strncmp( configuration.command, "get_pixel", 9 ) == 0 ) {
+    /* get_pixel() function is defined in feature.h and implemented in feature.c */
+    get_pixel();
+  }
   if ( strncmp( configuration.command, "helloworld", 10 ) == 0 ) {
     /* helloworld() function is defined in feature.h and implemented in feature.c */
     helloWorld();
   }
-  /*
-   * TO COMPLETE
-   */
   
   return 0;
+}
+void first_pixel (char *source_path){
+  /*Read and print the first pixel of the picture readen*/
+  char R,G,B ;
+  f= fopen(source_path, "r")
+  fscanf(source_path,"%d %d %d",%R, %G, %B);
+  printf("first pixel: %d, %d, %d", R,G,B);
 }
