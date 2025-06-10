@@ -12,7 +12,7 @@ int print_pixel(unsigned int width, unsigned x, unsigned y) {
 }
 
 int setPixel(){
-
+    return 0
 }
 
 /**
