@@ -16,9 +16,9 @@ void helloWorld() {
 }
 
 int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count){
-
+    return 0;
 }
 
 int write_image_data(const char *filename, unsigned char *data, int width, int height){
-    
+    return 0 ;
 }

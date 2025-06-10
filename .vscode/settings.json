@@ -4,13 +4,14 @@
         "args": [
             "--debug",
             "-f",
-            "images/input/another_image.bmp",
+            "images/input/image.jpeg",
             "-c",
-            "dimension"
+            "color_blue"
         ],
         "cwd": "${workspaceFolder}"
     },
     "files.associations": {
         "unistd.h": "c"
     },
+    "C_Cpp.errorSquiggles": "disabled",
 }
