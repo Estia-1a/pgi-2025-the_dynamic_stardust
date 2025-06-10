@@ -23,6 +23,4 @@ void print_pixel(const char *filename, int x, int y);
 /// @param x 
 /// @param y 
 
-void print_pixel(unsigned char*data, unsigned int x, unsigned y);
-
 #endif

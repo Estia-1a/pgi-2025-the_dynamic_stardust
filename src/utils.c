@@ -1,10 +1,10 @@
 #include <estia-image.h>
-
+#include <stddef.h>
 #include "utils.h"
 
 pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ) {
     if (!data || x >= width || y >= height || n < 3) {
-        return NULL
+        return NULL;
     }
 
     unsigned int index = (y * width + x) * n;
@@ -12,16 +12,17 @@ pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsig
 }
 
 void print_pixel(const char *filename, int x, int y) {
-    unsigned char *d; int width, height, n;
+    unsigned char *data; int width, height, n;
     if (read_image_date(filename, &data, &width, &height, &n)) return;
     pixelRGB *pixel = get_pixel(data, width, height, x, y, n);
     if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
-    free(data)
+    free(data);
 }
 
 
+
 int setPixel(){
-    return 0
+    return 0;
 }
 
 /**
