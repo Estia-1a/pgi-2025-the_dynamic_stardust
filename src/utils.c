@@ -7,7 +7,6 @@ pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsig
         return NULL;
     }
 
-    unsigned int index = (y * width + x) * n;
     return (pixelRGB *)&data[index];
 }
 
@@ -19,7 +18,17 @@ void print_pixel(const char *filename, int x, int y) {
     free(data);
 }
 
-
+void second_line(char *source_path){
+    int height, width,m ;
+    m= read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count) ;
+    if (m==0){
+        printf("Erreur lecture de l'image");
+    }
+    else {
+        printf("second_line: %d, %d, %d",)
+    }
+    free
+}
 
 int setPixel(){
     return 0;
