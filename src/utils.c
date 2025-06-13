@@ -6,14 +6,6 @@ pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsig
 }
 
 void print_pixel(const char *filename, int x, int y) {
-    unsigned char *data; int width, height, n;
-    if (read_image_date(filename, &data, &width, &height, &n)){
-        return    pixelRGB *pixel = get_pixel(data, width, height, x, y, n) ;
-    }
-    if (pixel) {
-        printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B) ;
-    }
-    free(data);
 }
 
 void second_line(char *source_path){
