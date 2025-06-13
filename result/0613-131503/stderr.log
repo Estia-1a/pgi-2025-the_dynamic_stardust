@@ -1,0 +1,132 @@
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:9:5: error: expected identifier or ‘(’ before ‘return’
+    9 |     return (pixelRGB *)&data[index];
+      |     ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:10:1: error: expected identifier or ‘(’ before ‘}’ token
+   10 | }
+      | ^
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c: In function ‘print_pixel’:
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:14:9: warning: implicit declaration of function ‘read_image_date’; did you mean ‘read_image_data’? [-Wimplicit-function-declaration]
+   14 |     if (read_image_date(filename, &data, &width, &height, &n)) return;
+      |         ^~~~~~~~~~~~~~~
+      |         read_image_data
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:16:16: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   16 |     if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
+      |                ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:4:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    3 | #include "utils.h"
+  +++ |+#include <stdio.h>
+    4 | 
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:16:16: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   16 |     if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
+      |                ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:16:16: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:17:5: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+   17 |     free(data);
+      |     ^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:4:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+    3 | #include "utils.h"
+  +++ |+#include <stdlib.h>
+    4 | 
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:17:5: warning: incompatible implicit declaration of built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+   17 |     free(data);
+      |     ^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:17:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c: In function ‘second_line’:
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:23:24: error: expected expression before ‘const’
+   23 |     m= read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count) ;
+      |                        ^~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:23:8: error: too few arguments to function ‘read_image_data’
+   23 |     m= read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count) ;
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:1:
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:13:5: note: declared here
+   13 | int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count);
+      |     ^~~~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:25:9: warning: implicit declaration of function ‘fprintf’ [-Wimplicit-function-declaration]
+   25 |         fprintf("Erreur lecture de l'image");
+      |         ^~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:25:9: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:25:9: warning: incompatible implicit declaration of built-in function ‘fprintf’ [-Wbuiltin-declaration-mismatch]
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:25:9: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:25:9: error: too few arguments to function ‘fprintf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:28:9: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   28 |         printf("second_line: %d, %d, %d", *data[3*width],*data[3*width+1],data[3*width+2]) ;
+      |         ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:28:9: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:28:43: error: invalid type argument of unary ‘*’ (have ‘int’)
+   28 |         printf("second_line: %d, %d, %d", *data[3*width],*data[3*width+1],data[3*width+2]) ;
+      |                                           ^~~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:28:58: error: invalid type argument of unary ‘*’ (have ‘int’)
+   28 |         printf("second_line: %d, %d, %d", *data[3*width],*data[3*width+1],data[3*width+2]) ;
+      |                                                          ^~~~~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:30:21: warning: passing argument 1 of ‘free_image_data’ makes pointer from integer without a cast [-Wint-conversion]
+   30 |     free_image_data(*data)
+      |                     ^~~~~
+      |                     |
+      |                     unsigned char
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:29:37: note: expected ‘unsigned char *’ but argument is of type ‘unsigned char’
+   29 | void free_image_data(unsigned char *data);
+      |                      ~~~~~~~~~~~~~~~^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:30:27: error: expected ‘;’ before ‘}’ token
+   30 |     free_image_data(*data)
+      |                           ^
+      |                           ;
+   31 | }
+      | ~                          
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c: In function ‘dimension’:
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:21:35: warning: passing argument 2 of ‘read_image_data’ makes pointer from integer without a cast [-Wint-conversion]
+   21 |     m=read_image_data(source_path,*data,width,height,channel_count);
+      |                                   ^~~~~
+      |                                   |
+      |                                   unsigned char
+In file included from /home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:1:
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:13:59: note: expected ‘unsigned char **’ but argument is of type ‘unsigned char’
+   13 | int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count);
+      |                                           ~~~~~~~~~~~~~~~~^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:21:41: warning: passing argument 3 of ‘read_image_data’ makes pointer from integer without a cast [-Wint-conversion]
+   21 |     m=read_image_data(source_path,*data,width,height,channel_count);
+      |                                         ^~~~~
+      |                                         |
+      |                                         int
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:13:70: note: expected ‘int *’ but argument is of type ‘int’
+   13 | int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count);
+      |                                                                 ~~~~~^~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:21:47: warning: passing argument 4 of ‘read_image_data’ makes pointer from integer without a cast [-Wint-conversion]
+   21 |     m=read_image_data(source_path,*data,width,height,channel_count);
+      |                                               ^~~~~~
+      |                                               |
+      |                                               int
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:13:82: note: expected ‘int *’ but argument is of type ‘int’
+   13 | int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count);
+      |                                                                             ~~~~~^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:21:54: warning: passing argument 5 of ‘read_image_data’ makes pointer from integer without a cast [-Wint-conversion]
+   21 |     m=read_image_data(source_path,*data,width,height,channel_count);
+      |                                                      ^~~~~~~~~~~~~
+      |                                                      |
+      |                                                      int
+/home/runner/work/pgi-2025-the_dynamic_stardust/lib/estia_image/include/estia-image.h:13:95: note: expected ‘int *’ but argument is of type ‘int’
+   13 | int read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:23:17: warning: passing argument 1 of ‘fprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   23 |         fprintf("Erreur de lecture de l'image");
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 char *
+In file included from /usr/include/stdio.h:980,
+                 from /home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:2:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:77:27: note: expected ‘FILE * restrict’ but argument is of type ‘char *’
+   77 | fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
+      |          ~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/features.c:23:9: error: too few arguments to function ‘fprintf’
+   23 |         fprintf("Erreur de lecture de l'image");
+      |         ^~~~~~~
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:77:1: note: declared here
+   77 | fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
+      | ^~~~~~~
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:121: CMakeFiles/freud.dir/src/utils.c.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:93: CMakeFiles/freud.dir/src/features.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/freud.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+
+The process '/usr/local/bin/cmake' failed with exit code 2
