@@ -11,8 +11,11 @@ pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsig
     return (pixelRGB *)&data[index];
 }
 
-
-
+void print_pixel(char *filename, int x, int y, ) {
+    int rid, width, height;
+    rid=read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count)
+    return (pixelRGB *) &data[ /* TO COMPLETE */] ;
+}
 
 int setPixel(){
     return 0;
