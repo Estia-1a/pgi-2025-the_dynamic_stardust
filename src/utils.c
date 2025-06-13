@@ -5,32 +5,17 @@
 #include <stdlib.h>
 
 pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ) {
-    if (x >= width || y >= height) {
-        return NULL;
-    }
-    else if (data == NULL){
-        return NULL;
-    }
-    else{
-        return (pixelRGB *)&data[(y * width + x) * n];
-    }
 }
 
-// si x et y sont hors des limites de l'image on retourne rien
-// si on ne trouve pas l'image on retourne rien
-// sinon on renvoie l'adresse du pixel
+void print_pixel(const char *filename, int x, int y) {
+}
 
-
-void print_pixel(char *filename, int x, int y) {
-    unsigned char *data = NULL;
-    int rid, width, height, channel_count;
-    rid = read_image_data(const char *filename, **data, *width, *height, *channel_count);
-    if (rid == NULL) {
-        return NULL;
-    }
-    pix = pixelRGB * get_pixel(data, width, height, n, x, y);
-    else if (pix==NULL){
-        return;
+void second_line(char *source_path){
+    int height, width,m, channel_count ;
+    unsigned char *data ;
+    m= read_image_data(source_path,*data, width, height, channel_count) ;
+    if (m==0){
+        fprintf("Erreur lecture de l'image");
     }
     else{
         printf("print_pixel (%d, %d): %d, %d, %d\n", x, y, pix->R, pix->G, pix->B);
