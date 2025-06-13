@@ -1,33 +1,40 @@
 #include <estia-image.h>
 #include <stddef.h>
 #include "utils.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ) {
-
+    if (x >= width || y >= height) {
+        return NULL;
     }
-
-    return (pixelRGB *)&data[index];
+    else if (data == NULL){
+        return NULL;
+    }
+    else{
+        return (pixelRGB *)&data[(y * width + x) * n];
+    }
 }
 
-void print_pixel(const char *filename, int x, int y) {
-    unsigned char *data; int width, height, n;
-    if (read_image_date(filename, &data, &width, &height, &n)) return;
-    pixelRGB *pixel = get_pixel(data, width, height, x, y, n);
-    if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
-    free(data);
-}
+// si x et y sont hors des limites de l'image on retourne rien
+// si on ne trouve pas l'image on retourne rien
+// sinon on renvoie l'adresse du pixel
 
-void second_line(char *source_path){
-    int height, width,m ;
-    unsigned char *data ;
-    m= read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count) ;
-    if (m==0){
-        fprintf("Erreur lecture de l'image");
+
+void print_pixel(char *filename, int x, int y) {
+    unsigned char *data = NULL;
+    int rid, width, height, channel_count;
+    rid = read_image_data(const char *filename, **data, *width, *height, *channel_count);
+    if (rid == NULL) {
+        return NULL;
     }
-    else {
-        printf("second_line: %d, %d, %d", *data[3*width],*data[3*width+1],data[3*width+2]) ;
+    pix = pixelRGB * get_pixel(data, width, height, n, x, y);
+    else if (pix==NULL){
+        return;
     }
-    free_image_data(*data)
+    else{
+        printf("print_pixel (%d, %d): %d, %d, %d\n", x, y, pix->R, pix->G, pix->B);
+    }
 }
 
 int setPixel(){
@@ -38,5 +45,3 @@ int setPixel(){
  * @brief Here, you have to define functions of the pixel struct : getPixel and setPixel.
  * 
  */
-
-
