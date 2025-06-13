@@ -3,18 +3,35 @@
 #include "utils.h"
 
 pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ) {
-    if (!data || x >= width || y >= height || n < 3) {
+    if (x >= width || y >= height) {
         return NULL;
     }
-
-    unsigned int index = (y * width + x) * n;
-    return (pixelRGB *)&data[index];
+    else if (data == NULL){
+        return NULL;
+    }
+    else{
+        return (pixelRGB *)&data[(y * width + x) * n];
+    }
 }
 
+// si x et y sont hors des limites de l'image on retourne rien
+// si on ne trouve pas l'image on retourne rien
+// sinon on renvoie l'adresse du pixel
+
+
 void print_pixel(char *filename, int x, int y, ) {
-    int rid, width, height;
-    rid=read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count)
-    return (pixelRGB *) &data[ /* TO COMPLETE */] ;
+    unsigned char *data
+    int rid, width, height, channel_count;
+    rid=read_image_data(filename, *data, width, height, channel_count);
+    if (get_pixel) {
+        return NULL;
+    }
+    else if (rid == NULL){
+        return NULL;
+    }
+    else{
+        printf("print_pixel (%d, %d): %d, %d, %d\n", x, y, R, G, B);
+    }
 }
 
 int setPixel(){
