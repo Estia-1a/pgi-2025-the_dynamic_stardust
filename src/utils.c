@@ -22,13 +22,13 @@ pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsig
 
 
 void print_pixel(char *filename, int x, int y) {
-    unsigned char *data
+    unsigned char *data;
     int rid, width, height, channel_count;
-    rid=read_image_data(filename, *data, width, height, channel_count);
+    rid=read_image_data(filename, data, width, height, channel_count);
     if (rid == NULL) {
         return NULL;
     }
-    pix = pixelRGB * get_pixel( *data, width, height, n, x, y);
+    pix = pixelRGB * get_pixel(data, width, height, n, x, y);
     else if (pix==NULL){
         return;
     }
