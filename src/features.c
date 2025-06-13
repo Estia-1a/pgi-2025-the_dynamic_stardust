@@ -17,8 +17,8 @@ void helloWorld() {
 
 void dimension (char *source_path){
     int width, height, channel_count, m ;
-    unsigned char *data;
-    m=read_image_data(source_path,*data,width,height,channel_count);
+    unsigned char **data;
+    m=read_image_data(source_path,data,&width,&height,&channel_count);
     if (m==0){
         perror("Erreur de lecture de l'image");
     }
