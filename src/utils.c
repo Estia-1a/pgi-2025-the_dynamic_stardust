@@ -3,8 +3,7 @@
 #include "utils.h"
 
 pixelRGB * get_pixel( unsigned char* data, const unsigned int width, const unsigned int height, const unsigned int n, const unsigned int x, const unsigned int y ) {
-    if (!data || x >= width || y >= height || n < 3) {
-        return NULL;
+
     }
 
     return (pixelRGB *)&data[index];
@@ -20,14 +19,15 @@ void print_pixel(const char *filename, int x, int y) {
 
 void second_line(char *source_path){
     int height, width,m ;
+    unsigned char *data ;
     m= read_image_data(const char *filename, unsigned char **data, int *width, int *height, int *channel_count) ;
     if (m==0){
-        printf("Erreur lecture de l'image");
+        fprintf("Erreur lecture de l'image");
     }
     else {
-        printf("second_line: %d, %d, %d",)
+        printf("second_line: %d, %d, %d", *data[3*width],*data[3*width+1],data[3*width+2]) ;
     }
-    free
+    free_image_data(*data)
 }
 
 int setPixel(){

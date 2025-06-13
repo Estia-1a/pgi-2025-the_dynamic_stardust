@@ -14,3 +14,15 @@
 void helloWorld() {
     printf("Hello World 6 !");
 }
+
+void dimension (char *source_path){
+    int width, height,channel_count, m ;
+    unsigned char *data;
+    m=read_image_data(source_path,*data,width,height,channel_count);
+    if (m==0){
+        fprintf("Erreur de lecture de l'image");
+    }
+    else{
+        printf("dimension: %d, %d", width, height);
+    }
+}

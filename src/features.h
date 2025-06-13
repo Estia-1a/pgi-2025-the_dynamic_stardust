@@ -29,5 +29,7 @@ int write_image_data(const char *filename, unsigned char *data, int width, int h
  */
  void free_image_data(unsigned char *data);
 
+ void dimension (char *source_path);
 
+ 
 #endif
