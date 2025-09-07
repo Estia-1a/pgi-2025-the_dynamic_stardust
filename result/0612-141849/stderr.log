@@ -1,0 +1,35 @@
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c: In function ‘print_pixel’:
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:16:9: warning: implicit declaration of function ‘read_image_date’; did you mean ‘read_image_data’? [-Wimplicit-function-declaration]
+   16 |     if (read_image_date(filename, &data, &width, &height, &n)) return;
+      |         ^~~~~~~~~~~~~~~
+      |         read_image_data
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:18:16: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   18 |     if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
+      |                ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:4:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    3 | #include "utils.h"
+  +++ |+#include <stdio.h>
+    4 | 
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:18:16: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   18 |     if (pixel) printf("Pixel (%d, %d): R=%d, G=%d, B=%d\n", x, y, pixel->R, pixel->G, pixel->B);
+      |                ^~~~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:18:16: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:19:5: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+   19 |     free(data);
+      |     ^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:4:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+    3 | #include "utils.h"
+  +++ |+#include <stdlib.h>
+    4 | 
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:19:5: warning: incompatible implicit declaration of built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+   19 |     free(data);
+      |     ^~~~
+/home/runner/work/pgi-2025-the_dynamic_stardust/pgi-2025-the_dynamic_stardust/src/utils.c:19:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+/usr/bin/ld: CMakeFiles/freud.dir/src/utils.c.o: in function `print_pixel':
+utils.c:(.text+0x73): undefined reference to `read_image_date'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:151: freud] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/freud.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+
+The process '/usr/local/bin/cmake' failed with exit code 2
